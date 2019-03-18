@@ -24,3 +24,8 @@ target_link_libraries(
     ${CUSTOM_LIBUV}
     ${CMAKE_THREAD_LIBS_INIT}
 		)
+
+install(
+    TARGETS endpoint_adaptor
+    DESTINATION bin
+    )

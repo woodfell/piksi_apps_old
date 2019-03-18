@@ -17,3 +17,8 @@ target_link_libraries(
     gnss_converters
     ${CUSTOM_LIBUV}
 		)
+
+install(
+    TARGETS csac_daemon
+    DESTINATION bin
+    )

@@ -24,3 +24,8 @@ target_link_libraries(
 		sbp
     ${CUSTOM_LIBUV}
 		)
+
+install(
+    TARGETS cell_modem_daemon
+    DESTINATION bin
+    )

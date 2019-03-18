@@ -20,3 +20,8 @@ target_link_libraries(
     curl
     ${CUSTOM_LIBUV}
 		)
+
+install(
+    TARGETS ntrip_daemon
+    DESTINATION bin
+    )

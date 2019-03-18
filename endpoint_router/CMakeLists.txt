@@ -23,3 +23,8 @@ target_link_libraries(
     yaml
     ${CUSTOM_LIBUV}
 		)
+
+install(
+    TARGETS endpoint_router
+    DESTINATION bin
+    )
