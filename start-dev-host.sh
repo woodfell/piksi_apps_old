@@ -14,4 +14,4 @@ fi
 
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=staging ..
+cmake -DBUILD_SHARED_LIBS=y -DCMAKE_INSTALL_PREFIX=staging ..
