@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ -e build];
+if [ -e build ];
 then
-  echo "buildalready exists"
+  echo "build already exists"
   exit 1
 fi
 

@@ -21,7 +21,7 @@ target_link_libraries(
     piksi
     settings
 		sbp
-    ${CUSTOM_LIBUV}
+    ${LIBUV}
     ${CMAKE_THREAD_LIBS_INIT}
 		)
 

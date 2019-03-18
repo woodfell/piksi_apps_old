@@ -1,24 +1,23 @@
-project (nmea_daemon)
+project (network_daemon)
 
 set(SRCS
-   nmea_daemon.c
+    network_daemon.c
 	)
 
 add_executable(
-		nmea_daemon
+		network_daemon
 		${SRCS}
 		)
 
 target_link_libraries(
-		nmea_daemon
+		network_daemon
+    sbp
     piksi
     settings
-		sbp
-    gnss_converters
     ${LIBUV}
 		)
 
 install(
-    TARGETS nmea_daemon
+    TARGETS network_daemon
     DESTINATION bin
     )

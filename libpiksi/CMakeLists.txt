@@ -71,7 +71,7 @@ target_link_libraries(
     piksi
     sbp
     settings
-    ${CUSTOM_LIBUV}
+    ${LIBUV}
     )
 
 install(

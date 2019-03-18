@@ -15,7 +15,7 @@ target_link_libraries(
     settings
 		sbp
     gnss_converters
-    ${CUSTOM_LIBUV}
+    ${LIBUV}
 		)
 
 install(

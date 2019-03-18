@@ -18,7 +18,7 @@ target_link_libraries(
 		sbp
     network
     curl
-    ${CUSTOM_LIBUV}
+    ${LIBUV}
 		)
 
 install(

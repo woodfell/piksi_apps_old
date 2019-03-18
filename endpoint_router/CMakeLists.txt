@@ -21,7 +21,7 @@ target_link_libraries(
 		sbp
     cmph
     yaml
-    ${CUSTOM_LIBUV}
+    ${LIBUV}
 		)
 
 install(
