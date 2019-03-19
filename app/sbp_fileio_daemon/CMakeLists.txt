@@ -43,17 +43,32 @@ install(
     DESTINATION bin
     )
 
-if (BUILD_TESTING)
-add_executable(
-    sbp_fileio_daemon_tests
-    ${DAEMON_SRCS}
-    test/run_sbp_fileio_daemon_tests.cc
-    )
+if (BUILD_UNIT_TESTS)
+  message(STATUS "Adding sbp_fileio_daemon unit tests")
+  add_executable(
+      sbp_fileio_daemon_tests
+      sbp_fileio.c
+      path_validator.c
+      test/run_sbp_fileio_daemon_tests.cc
+      )
+  
+  target_include_directories(
+      sbp_fileio_daemon_tests
+      PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+      )
 
-add_test(
-    NAME sbp_fileio_daemon_test
-    COMMAND sbp_fileio_daemon_test
-    WORKING_DIRECTORY test
-    )
+  target_link_libraries(
+      sbp_fileio_daemon_tests
+      piksi
+      ${CMAKE_THREAD_LIBS_INIT}
+      ${LIBUV}
+      ${GTEST_BOTH_LIBRARIES}
+      )
+
+  add_test(
+      NAME sbp_fileio_daemon_tests
+      COMMAND sbp_fileio_daemon_tests
+      WORKING_DIRECTORY test
+      )
 endif()
 

@@ -14,6 +14,20 @@ find_library(LIBJSONC
 
 find_package(Threads REQUIRED)
 
+if(CMAKE_CROSSCOMPILING)
+  message(STATUS "Skipping unit tests because we are cross compiling")
+else()
+  message(STATUS "Enabling unit tests")
+  if (EXISTS ${CMAKE_SOURCE_DIR}/external/googletest/googletest/CMakeLists.txt)
+    add_subdirectory(${CMAKE_SOURCE_DIR}/external/googletest/googletest)
+    set(GTEST_BOTH_LIBRARIES gtest)
+  else()
+    find_package(GTest REQUIRED)
+  endif()
+  enable_testing()
+  set(BUILD_UNIT_TESTS TRUE)
+endif()
+
 if (EXISTS ${CMAKE_SOURCE_DIR}/external/libswiftnav/CMakeLists.txt)
   add_subdirectory(external/libswiftnav)
 endif()
@@ -32,13 +46,6 @@ endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/external/gnss-converters/c/CMakeLists.txt)
   add_subdirectory(external/gnss-converters/c)
-endif()
-
-if (CMAKE_CROSSCOMPILING)
-  message(STATUS "Skipping unit tests because we are cross compiling")
-else()
-  message(STATUS "Enabling unit tests")
-  enable_testing()
 endif()
 
 add_subdirectory(lib)
