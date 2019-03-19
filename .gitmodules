@@ -3,13 +3,13 @@
 	url = git@github.com:swift-nav/libsbp.git
 [submodule "external/libsettings"]
 	path = external/libsettings
-	url = git@github.com:swift-nav/libsettings.git
+	url = git@github.com:woodfell/libsettings.git
 [submodule "external/librtcm"]
 	path = external/librtcm
 	url = git@github.com:swift-nav/librtcm.git
 [submodule "external/libswiftnav"]
 	path = external/libswiftnav
-	url = git@github.com:swift-nav/libswiftnav.git
+	url = git@github.com:woodfell/libswiftnav.git
 [submodule "external/gnss-converters"]
 	path = external/gnss-converters
 	url = git@github.com:swift-nav/gnss-converters.git
