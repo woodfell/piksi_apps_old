@@ -84,3 +84,8 @@ install(
     DESTINATION include/libpiksi
     )
 
+if (BUILD_UNIT_TESTS)
+  message(STATUS "Adding libpiksi unit tests")
+  add_subdirectory(test)
+endif()
+
