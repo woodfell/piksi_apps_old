@@ -13,3 +13,6 @@
 [submodule "external/gnss-converters"]
 	path = external/gnss-converters
 	url = git@github.com:swift-nav/gnss-converters.git
+[submodule "external/googletest"]
+	path = external/googletest
+	url = https://github.com/google/googletest.git
