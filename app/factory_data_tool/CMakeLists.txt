@@ -1,8 +1,6 @@
 project (factory_data_tool)
 
 set(SRCS
-  common.h
-  compiler.h
   factory_data_tool.c
 	)
 
@@ -13,5 +11,10 @@ add_executable(
 
 target_link_libraries(
 		factory_data_tool
-    z
+    factorydata
 		)
+
+install(
+    TARGETS factory_data_tool
+    DESTINATION bin
+    )

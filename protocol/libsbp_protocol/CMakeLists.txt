@@ -22,6 +22,6 @@ install(
     )
 
 install(
-    FILES sbp_router_smoothpose.yml sbp_protocol.yml
+    FILES sbp_router_smoothpose.yml sbp_router.yml
     DESTINATION etc/endpoint_router
     )

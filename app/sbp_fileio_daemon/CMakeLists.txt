@@ -42,3 +42,18 @@ install(
     TARGETS sbp_fileio_daemon sbp_fileio_flush
     DESTINATION bin
     )
+
+if (BUILD_TESTING)
+add_executable(
+    sbp_fileio_daemon_tests
+    ${DAEMON_SRCS}
+    test/run_sbp_fileio_daemon_tests.cc
+    )
+
+add_test(
+    NAME sbp_fileio_daemon_test
+    COMMAND sbp_fileio_daemon_test
+    WORKING_DIRECTORY test
+    )
+endif()
+

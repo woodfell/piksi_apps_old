@@ -17,6 +17,7 @@ target_link_libraries(
     piksi
     gnss_converters
     settings
+    m
     ${LIBUV}
     )
 

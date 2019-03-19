@@ -20,6 +20,6 @@ install(
     )
 
 install(
-    FILES nmea_protocol.yml
+    FILES nmea_router.yml
     DESTINATION etc/endpoint_router
     )

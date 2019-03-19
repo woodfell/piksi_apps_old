@@ -12,8 +12,8 @@
 
 #include "common.h"
 
-#include "uboot/factory_data.h"
-#include "uboot/image_table.h"
+#include <factory_data.h>
+#include <image_table.h>
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 

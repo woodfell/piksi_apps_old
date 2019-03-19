@@ -13,8 +13,3 @@ install(
     TARGETS rtcm3_out_protocol
     DESTINATION lib
     )
-
-install(
-    FILES rtcm3_router.yml
-    DESTINATION etc/endpoint_router
-    )
