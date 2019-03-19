@@ -10,3 +10,6 @@
 [submodule "external/libswiftnav"]
 	path = external/libswiftnav
 	url = git@github.com:swift-nav/libswiftnav.git
+[submodule "external/gnss-converters"]
+	path = external/gnss-converters
+	url = git@github.com:swift-nav/gnss-converters.git
