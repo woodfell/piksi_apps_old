@@ -26,5 +26,41 @@ target_link_libraries(
 
 install(
     TARGETS endpoint_router
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )
+
+if (BUILD_UNIT_TESTS)
+  message(STATUS "Adding endpoint_router unit tests")
+  add_executable(
+      endpoint_router_tests
+      test/endpoint_router_test.cc
+      ${SRCS}
+      )
+  
+  target_include_directories(
+      endpoint_router_tests
+      PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+      )
+
+  target_link_libraries(
+      endpoint_router_tests
+      PUBLIC
+      sbp
+      piksi
+      dl
+      yaml
+      ${CMAKE_THREAD_LIBS_INIT}
+      settings
+      cmph
+      ${LIBUV}
+      ${GTEST_BOTH_LIBRARIES}
+      )
+  target_link_libraries(endpoint_router_tests PRIVATE "-z muldefs")
+
+  add_test(
+      NAME endpoint_router_tests
+      COMMAND endpoint_router_tests
+      WORKING_DIRECTORY test
+      )
+endif()
+

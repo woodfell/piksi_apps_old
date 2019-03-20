@@ -23,5 +23,5 @@ target_link_libraries(
 
 install(
     TARGETS sbp_nmea_bridge
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )

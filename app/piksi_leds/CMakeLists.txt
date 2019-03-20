@@ -27,5 +27,5 @@ target_link_libraries(
 
 install(
     TARGETS piksi_leds
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )

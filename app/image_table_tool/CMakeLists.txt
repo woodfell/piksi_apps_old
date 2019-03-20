@@ -16,5 +16,5 @@ target_link_libraries(
 
 install(
     TARGETS image_table_tool
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )

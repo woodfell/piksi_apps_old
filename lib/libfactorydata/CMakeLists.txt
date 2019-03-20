@@ -30,7 +30,7 @@ target_link_libraries(
 
 install(
     TARGETS factorydata
-    DESTINATION lib
+    DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
     )
 
 install(

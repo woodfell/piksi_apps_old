@@ -16,10 +16,10 @@ target_link_libraries(
 
 install(
     TARGETS nmea_protocol
-    DESTINATION lib
+    DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
     )
 
 install(
     FILES nmea_router.yml
-    DESTINATION etc/endpoint_router
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/endpoint_router
     )

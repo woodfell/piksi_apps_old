@@ -24,5 +24,10 @@ target_link_libraries(
 
 install(
     TARGETS sample_daemon
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+    )
+
+install(
+    PROGRAMS S83sample_daemon
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/init.d
     )

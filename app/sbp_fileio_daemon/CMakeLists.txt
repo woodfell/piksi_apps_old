@@ -40,7 +40,12 @@ target_link_libraries(
 
 install(
     TARGETS sbp_fileio_daemon sbp_fileio_flush
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+    )
+
+install(
+    PROGRAMS S81sbp_fileio_daemon_external
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/init.d
     )
 
 if (BUILD_UNIT_TESTS)

@@ -24,7 +24,7 @@ target_link_libraries(
 
 install(
     TARGETS sbp_settings_daemon
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )
 
 if (BUILD_UNIT_TESTS)

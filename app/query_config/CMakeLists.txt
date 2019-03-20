@@ -19,5 +19,5 @@ target_link_libraries(
 
 install(
     TARGETS query_config
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )

@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project (piksi_apps C)
 
+include (GNUInstallDirs)
+
 find_library(LIBUV 
     NAMES libuv.so
     PATHS /usr/local/lib

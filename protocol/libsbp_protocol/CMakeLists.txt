@@ -18,10 +18,10 @@ target_link_libraries(
 
 install(
     TARGETS sbp_protocol
-    DESTINATION lib
+    DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
     )
 
 install(
     FILES sbp_router_smoothpose.yml sbp_router.yml
-    DESTINATION etc/endpoint_router
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/endpoint_router
     )

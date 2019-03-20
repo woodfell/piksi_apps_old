@@ -20,5 +20,10 @@ target_link_libraries(
 
 install(
     TARGETS csac_daemon
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+    )
+
+install(
+    PROGRAMS S86csac_daemon
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/init.d
     )

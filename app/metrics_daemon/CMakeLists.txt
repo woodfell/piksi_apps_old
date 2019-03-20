@@ -24,11 +24,20 @@ target_link_libraries(
 
 install(
     TARGETS metrics_daemon
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )
 
-# Unit tests are currently broken
-if (BUILD_UNIT_TESTS AND UNIT_TEST_ARE_BROKEN_DO_NOT_COMPILE)
+install(
+    PROGRAMS init.d/S86metrics_daemon
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/init.d
+    )
+
+install(
+    FILES logrotate.d/metrics_json
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/logrotate.d
+    )
+
+if (BUILD_UNIT_TESTS AND UNIT_TESTS_ARE_BROKEN_DO_NOT_COMPILE)
   message(STATUS "Adding metric_daemon unit tests")
   add_executable(
       metrics_daemon_tests
@@ -43,12 +52,14 @@ if (BUILD_UNIT_TESTS AND UNIT_TEST_ARE_BROKEN_DO_NOT_COMPILE)
 
   target_link_libraries(
       metrics_daemon_tests
+      PUBLIC
       piksi
       sbp
       settings
       ${LIBJSONC}
       ${GTEST_BOTH_LIBRARIES}
       )
+  target_link_libraries(metrics_daemon_tests PRIVATE "-z muldefs")
 
   add_test(
       NAME metrics_daemon_tests

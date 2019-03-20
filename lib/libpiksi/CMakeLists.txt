@@ -1,4 +1,4 @@
-project (libpiksi)
+project (libpiksi C CXX)
 
 set (HDRS
   include/libpiksi/cast_check.h
@@ -76,7 +76,7 @@ target_link_libraries(
 
 install(
     TARGETS piksi
-    DESTINATION lib
+    DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
     )
 
 install(

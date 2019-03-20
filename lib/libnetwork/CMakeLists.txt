@@ -27,7 +27,7 @@ target_link_libraries(
 
 install(
     TARGETS network
-    DESTINATION lib
+    DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
     )
 
 install(

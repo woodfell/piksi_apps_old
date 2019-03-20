@@ -36,5 +36,5 @@ target_link_libraries(
 
 install(
     TARGETS sbp_log sbp_cmd_resp
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )

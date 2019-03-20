@@ -27,5 +27,22 @@ target_link_libraries(
 
 install(
     TARGETS cell_modem_daemon
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+    )
+
+install(
+    PROGRAMS
+      init.d/S86cell_modem_daemon
+      init.d/kill_pppd_service
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/init.d
+    )
+
+install(
+    FILES sudoers.d/cell_modem_daemon
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/sudoers.d
+    )
+
+install(
+    PROGRAMS sv/cell_modem_daemon_runsvdir/run
+    DESTINATION ${CMAKE_INSTAL_FULL_SYSCONFDIR}/sv/cell_modem_daemon_runsvdir
     )

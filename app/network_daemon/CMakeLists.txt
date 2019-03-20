@@ -19,5 +19,10 @@ target_link_libraries(
 
 install(
     TARGETS network_daemon
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+    )
+
+install(
+    PROGRAMS S86network_daemon
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/init.d
     )

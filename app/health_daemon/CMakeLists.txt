@@ -42,5 +42,5 @@ target_link_libraries(
 
 install(
     TARGETS health_daemon
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )

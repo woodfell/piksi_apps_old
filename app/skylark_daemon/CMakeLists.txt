@@ -23,5 +23,10 @@ target_link_libraries(
 
 install(
     TARGETS skylark_daemon
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+    )
+
+install(
+    PROGRAMS S82skylark_daemon
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/init.d
     )

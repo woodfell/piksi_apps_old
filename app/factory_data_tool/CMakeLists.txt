@@ -16,5 +16,5 @@ target_link_libraries(
 
 install(
     TARGETS factory_data_tool
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )

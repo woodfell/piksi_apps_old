@@ -23,5 +23,10 @@ target_link_libraries(
 
 install(
     TARGETS ntrip_daemon
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+    )
+
+install(
+    PROGRAMS S82ntrip_daemon
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}
     )

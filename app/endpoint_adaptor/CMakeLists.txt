@@ -27,5 +27,5 @@ target_link_libraries(
 
 install(
     TARGETS endpoint_adaptor
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )

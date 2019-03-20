@@ -11,5 +11,5 @@ add_library(
 
 install(
     TARGETS rtcm3_out_protocol
-    DESTINATION lib
+    DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
     )

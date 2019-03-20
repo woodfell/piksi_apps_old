@@ -22,5 +22,5 @@ target_link_libraries(
 
 install(
     TARGETS sbp_rtcm3_bridge
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
     )
