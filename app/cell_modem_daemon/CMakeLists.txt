@@ -44,5 +44,5 @@ install(
 
 install(
     PROGRAMS sv/cell_modem_daemon_runsvdir/run
-    DESTINATION ${CMAKE_INSTAL_FULL_SYSCONFDIR}/sv/cell_modem_daemon_runsvdir
+    DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/sv/cell_modem_daemon_runsvdir
     )
