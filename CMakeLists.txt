@@ -2,7 +2,17 @@ cmake_minimum_required(VERSION 3.10)
 
 project (piksi_apps C)
 
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include (GNUInstallDirs)
+include(FindDependency)
+
+message(WARNING "Install path ${CMAKE_INSTALL_FULL_BINDIR}")
+
+FindDependency(TARGET sbp SUBDIR third_party/libsbp/c CHECK_TARGET REQUIRED LIBS libsbp.so)
+FindDependency(TARGET settings CHECK_TARGET REQUIRED LIBS libsettings.so)
+FindDependency(TARGET swiftnav CHECK_TARGET)
+
+return()
 
 find_library(LIBUV 
     NAMES libuv.so
